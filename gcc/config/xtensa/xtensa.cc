@@ -2894,6 +2894,27 @@ xtensa_option_override (void)
   if (xtensa_windowed_abi == -1)
     xtensa_windowed_abi = TARGET_WINDOWED_ABI_DEFAULT;
 
+  if (xtensa_big_endian == -1)
+    xtensa_big_endian = TARGET_BIG_ENDIAN_DEFAULT;
+
+  if (xtensa_density == -1)
+    xtensa_density = TARGET_DENSITY_DEFAULT;
+
+  if (xtensa_fp == -1)
+    xtensa_fp = TARGET_HARD_FLOAT_DEFAULT;
+
+  if (xtensa_minmax == -1)
+    xtensa_minmax = TARGET_MINMAX_DEFAULT;
+
+  if (xtensa_sext == -1)
+    xtensa_sext = TARGET_SEXT_DEFAULT;
+
+  if (xtensa_clamps == -1)
+    xtensa_clamps = TARGET_CLAMPS_DEFAULT;
+
+  if (xtensa_loops == -1)
+    xtensa_loops = TARGET_LOOPS_DEFAULT;
+
   if (xtensa_strict_alignment == XTENSA_STRICT_ALIGNMENT_UNDEFINED)
     xtensa_strict_alignment = !XCHAL_UNALIGNED_LOAD_HW
       || !XCHAL_UNALIGNED_STORE_HW;

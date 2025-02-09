@@ -71,3 +71,80 @@ Use windowed registers ABI.
 mstrict-align
 Target Var(xtensa_strict_alignment) Init(XTENSA_STRICT_ALIGNMENT_UNDEFINED)
 Do not use unaligned memory references.
+
+TargetVariable
+int xtensa_big_endian = -1
+
+mlittle-endian
+Target RejectNegative Var(xtensa_big_endian, 0)
+Generate code for a little-endian target.
+
+mbig-endian
+Target RejectNegative Var(xtensa_big_endian, 1)
+Generate code for a big-endian target.
+
+TargetVariable
+int xtensa_density = -1
+
+mno-density
+Target RejectNegative Var(xtensa_density, 0)
+Do not generate narrow form of instruction at all.
+
+mdensity
+Target RejectNegative Var(xtensa_density, 1)
+Generate narrow form of instruction as possible.
+
+TargetVariable
+int xtensa_fp = -1
+
+mno-fp
+Target RejectNegative Var(xtensa_fp, 0)
+Do not generate code for hardware floating point unit.
+
+mfp
+Target RejectNegative Var(xtensa_fp, 1)
+Generate code for hardware floating point unit.
+
+TargetVariable
+int xtensa_minmax = -1
+
+mno-minmax
+Target RejectNegative Var(xtensa_minmax, 0)
+Do not generate code using the minimum and maximum value instructions.
+
+mminmax
+Target RejectNegative Var(xtensa_minmax, 1)
+Generate code using the minimum and maximum value instructions.
+
+TargetVariable
+int xtensa_sext = -1
+
+mno-sext
+Target RejectNegative Var(xtensa_sext, 0)
+Do not generate code using SEXT the sign extend instruction.
+
+msext
+Target RejectNegative Var(xtensa_sext, 1)
+Generate code using SEXT the sign extend instruction.
+
+TargetVariable
+int xtensa_clamps = -1
+
+mno-clamps
+Target RejectNegative Var(xtensa_clamps, 0)
+Do not generate code using CLAMPS the signed clamp instruction.
+
+mclamps
+Target RejectNegative Var(xtensa_clamps, 1)
+Generate code using CLAMPS the signed clamp instruction.
+
+TargetVariable
+int xtensa_loops = -1
+
+mno-loops
+Target RejectNegative Var(xtensa_loops, 0)
+Do not generate code using zero-overhead loop instructions.
+
+mloops
+Target RejectNegative Var(xtensa_loops, 1)
+Generate code using zero-overhead loop instructions.
